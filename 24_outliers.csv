@@ -1,0 +1,40 @@
+Session_ID,User_ID,Session_Date,Feature_Used,Device_Type,Age_Group,Session_Duration_Mins,User_Rating,Month,Month_Number,Weekday,Hour
+S00033,U0028,2026-10-20 23:49:00,Offers,Android,35-44,30.9,5.0,October,10,Tuesday,23
+S00059,U0145,2026-04-09 09:39:00,Notifications,iOS,25-34,29.6,2.0,April,4,Thursday,9
+S00115,U0275,2026-02-04 00:24:00,Profile,iOS,35-44,41.6,3.0,February,2,Wednesday,0
+S00161,U0078,2026-06-01 11:26:00,Chat,Android,25-34,27.1,4.0,June,6,Monday,11
+S00173,U0179,2026-09-01 02:43:00,Payments,Tablet,45-54,32.3,4.0,September,9,Tuesday,2
+S00176,U0063,2026-03-15 12:38:00,Home Feed,iOS,13-17,29.1,5.0,March,3,Sunday,12
+S00206,U0159,2026-03-31 03:36:00,Payments,Android,35-44,30.0,4.0,March,3,Tuesday,3
+S00220,U0243,2026-04-26 03:58:00,Notifications,Tablet,45-54,32.3,4.0,April,4,Sunday,3
+S00223,U0299,2026-02-12 10:07:00,Settings,Android,35-44,39.4,3.0,February,2,Thursday,10
+S00234,U0141,2026-02-16 15:32:00,Home Feed,Android,35-44,29.4,1.0,February,2,Monday,15
+S00240,U0133,2026-06-06 10:41:00,Home Feed,Android,25-34,32.5,4.0,June,6,Saturday,10
+S00285,U0154,2026-04-09 22:43:00,Search,iOS,18-24,27.1,3.0,April,4,Thursday,22
+S00312,U0114,2026-09-12 01:51:00,Search,Android,35-44,31.5,4.0,September,9,Saturday,1
+S00354,U0036,2026-07-18 05:52:00,Home Feed,iOS,35-44,27.6,4.0,July,7,Saturday,5
+S00395,U0109,2026-02-27 15:09:00,Home Feed,Android,25-34,28.1,4.0,February,2,Friday,15
+S00396,U0098,2026-07-27 04:36:00,Search,Android,45-54,29.7,2.0,July,7,Monday,4
+S00419,U0173,2026-10-17 02:29:00,Notifications,iOS,25-34,33.6,3.0,October,10,Saturday,2
+S00453,U0201,2026-02-23 20:55:00,Home Feed,iOS,25-34,38.9,4.0,February,2,Monday,20
+S00454,U0154,2026-07-06 15:59:00,Home Feed,iOS,18-24,28.0,4.0,July,7,Monday,15
+S00456,U0201,2026-02-18 15:11:00,Home Feed,Android,25-34,27.7,4.0,February,2,Wednesday,15
+S00459,U0129,2026-10-10 08:59:00,Chat,Tablet,55+,27.1,5.0,October,10,Saturday,8
+S00476,U0017,2026-05-08 19:58:00,Offers,iOS,35-44,31.7,3.0,May,5,Friday,19
+S00510,U0273,2026-05-08 03:02:00,Video Player,Android,25-34,29.7,4.0,May,5,Friday,3
+S00575,U0107,2026-10-04 06:27:00,Notifications,Android,55+,35.4,3.0,October,10,Sunday,6
+S00618,U0038,2026-05-25 08:29:00,Chat,Android,18-24,28.4,4.0,May,5,Monday,8
+S00719,U0130,2026-01-02 01:42:00,Video Player,Android,35-44,36.8,3.0,January,1,Friday,1
+S00738,U0012,2026-09-03 10:11:00,Home Feed,iOS,18-24,36.4,5.0,September,9,Thursday,10
+S00743,U0072,2026-05-22 02:36:00,Settings,Android,45-54,31.1,4.0,May,5,Friday,2
+S00804,U0194,2026-04-19 00:56:00,Search,iOS,18-24,27.3,4.0,April,4,Sunday,0
+S00834,U0012,2026-08-10 15:47:00,Chat,Android,25-34,30.8,3.0,August,8,Monday,15
+S00839,U0055,2026-04-25 21:01:00,Settings,iOS,18-24,29.0,1.0,April,4,Saturday,21
+S00869,U0105,2026-07-14 13:21:00,Settings,Android,18-24,39.5,2.0,July,7,Tuesday,13
+S00873,U0066,2026-10-01 08:00:00,Notifications,iOS,45-54,29.2,4.0,October,10,Thursday,8
+S00877,U0186,2026-07-10 21:47:00,Payments,Android,18-24,31.6,4.0,July,7,Friday,21
+S00936,U0251,2026-01-05 19:49:00,Notifications,Tablet,18-24,31.7,5.0,January,1,Monday,19
+S00942,U0001,2026-10-17 07:22:00,Notifications,iOS,18-24,27.0,2.0,October,10,Saturday,7
+S00949,U0179,2026-06-24 05:15:00,Home Feed,Android,25-34,34.4,1.0,June,6,Wednesday,5
+S00957,U0299,2026-05-31 07:44:00,Chat,Android,55+,29.1,2.0,May,5,Sunday,7
+S00969,U0234,2026-10-26 11:22:00,Home Feed,iOS,25-34,45.3,3.0,October,10,Monday,11
