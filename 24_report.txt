@@ -1,0 +1,202 @@
+
+======================================================================
+TASK 1: Load and inspect the data
+======================================================================
+Rows, columns: (1012, 8)
+Column names: ['Session_ID', 'User_ID', 'Session_Date', 'Feature_Used', 'Device_Type', 'Age_Group', 'Session_Duration_Mins', 'User_Rating']
+Data types:
+Session_ID                   str
+User_ID                      str
+Session_Date                 str
+Feature_Used                 str
+Device_Type                  str
+Age_Group                    str
+Session_Duration_Mins    float64
+User_Rating              float64
+dtype: object
+First 5 rows:
+  Session_ID User_ID  ... Session_Duration_Mins User_Rating
+0     S00001   U0022  ...                  13.3         3.0
+1     S00002   U0001  ...                   NaN         5.0
+2     S00003   U0133  ...                   1.7         3.0
+3     S00004   U0233  ...                   3.7         NaN
+4     S00005   U0012  ...                  15.3         5.0
+
+[5 rows x 8 columns]
+
+======================================================================
+TASK 2: Missing values and duplicate Session_IDs
+======================================================================
+Missing values per column:
+Session_ID                0
+User_ID                   0
+Session_Date              0
+Feature_Used              0
+Device_Type               0
+Age_Group                 0
+Session_Duration_Mins    40
+User_Rating              50
+dtype: int64
+Duplicate Session_ID rows: 12
+Rows after removing duplicates: 1000
+
+======================================================================
+TASK 3: Handle missing Session_Duration_Mins and User_Rating
+======================================================================
+Method: fill missing values with the MEDIAN of each column.
+Reason: session times are skewed by a few very long sessions, and the
+median is not pulled up by them the way the mean is. Ratings are whole
+numbers, so the median keeps a sensible rating value.
+Missing values after cleaning:
+Session_Duration_Mins    0
+User_Rating              0
+dtype: int64
+
+======================================================================
+TASK 4: Convert Session_Date and extract month, weekday, hour
+======================================================================
+         Session_Date      Month   Weekday  Hour
+0 2026-03-26 16:38:00      March  Thursday    16
+1 2026-04-12 23:47:00      April    Sunday    23
+2 2026-04-02 14:52:00      April  Thursday    14
+3 2026-09-12 01:18:00  September  Saturday     1
+4 2026-06-29 23:38:00       June    Monday    23
+
+======================================================================
+TASK 5: Total sessions, unique users, average session duration
+======================================================================
+Total sessions: 1000
+Unique users: 290
+Average session duration: 10.75 minutes
+
+======================================================================
+TASK 6: 10 most frequently used features
+======================================================================
+Feature_Used
+Home Feed        226
+Search           156
+Chat             137
+Notifications    111
+Profile           79
+Video Player      78
+Payments          73
+Settings          65
+Offers            51
+Wishlist          24
+Name: count, dtype: int64
+
+======================================================================
+TASK 7: Average session duration by device type
+======================================================================
+Device_Type
+Tablet     11.27
+iOS        10.82
+Android    10.59
+Name: Session_Duration_Mins, dtype: float64
+
+======================================================================
+TASK 8: Age groups ranked by number of sessions
+======================================================================
+Age_Group
+18-24    302
+25-34    279
+35-44    170
+45-54    104
+13-17     75
+55+       70
+Name: Session_ID, dtype: int64
+
+======================================================================
+TASK 9: Average user rating by feature
+======================================================================
+Feature_Used
+Wishlist         4.25
+Video Player     3.91
+Profile          3.87
+Payments         3.86
+Home Feed        3.83
+Search           3.78
+Offers           3.76
+Notifications    3.68
+Settings         3.65
+Chat             3.58
+Name: User_Rating, dtype: float64
+
+======================================================================
+TASK 10: Peak usage hours and busiest weekdays
+======================================================================
+Top 5 busiest hours (hour of day : sessions):
+Hour
+21    56
+17    53
+15    52
+14    51
+18    50
+Name: count, dtype: int64
+Sessions by weekday:
+Weekday
+Sunday       152
+Monday       151
+Saturday     149
+Friday       149
+Thursday     135
+Wednesday    133
+Tuesday      131
+Name: count, dtype: int64
+
+======================================================================
+TASK 11: List, tuple and set
+======================================================================
+List of most-used features: ['Home Feed', 'Search', 'Chat', 'Notifications', 'Profile', 'Video Player', 'Payments', 'Settings', 'Offers', 'Wishlist']
+Tuple of device categories: ('Android', 'Tablet', 'iOS')
+Number of unique users (set): 290
+
+======================================================================
+TASK 12: Function - average session duration for a feature
+======================================================================
+Home Feed: 10.92 minutes
+Search: 10.04 minutes
+Chat: 10.65 minutes
+
+======================================================================
+TASK 13: NumPy statistics for session duration
+======================================================================
+Mean:   10.75
+Median: 9.30
+Std dev: 7.03
+
+======================================================================
+TASK 14: Outliers (IQR method) and engagement labels
+======================================================================
+Q1=5.70, Q3=14.20, IQR=8.50
+Normal range: -7.05 to 26.95 minutes
+Unusually long/short sessions found: 39
+    Session_ID User_ID   Feature_Used  Session_Duration_Mins
+32      S00033   U0028         Offers                   30.9
+58      S00059   U0145  Notifications                   29.6
+114     S00115   U0275        Profile                   41.6
+160     S00161   U0078           Chat                   27.1
+172     S00173   U0179       Payments                   32.3
+175     S00176   U0063      Home Feed                   29.1
+205     S00206   U0159       Payments                   30.0
+219     S00220   U0243  Notifications                   32.3
+222     S00223   U0299       Settings                   39.4
+233     S00234   U0141      Home Feed                   29.4
+Engagement rules: Low if <= 6.90 mins, Medium if <= 11.90 mins, High if above that.
+Engagement
+High      339
+Low       337
+Medium    324
+Name: count, dtype: int64
+
+======================================================================
+TASK 15: AppUser class and recommendations
+======================================================================
+AppUser(user_id=U0022, device_type=iOS)
+Five recommendations:
+1. 'Home Feed' is the most used feature (226 sessions). Keep it fast and prominent on the home screen.
+2. 'Chat' has the lowest average rating (3.58). Review its usability and fix pain points.
+3. Android users have the shortest sessions (10.59 mins vs 11.27 on Tablet). Check performance and layout on Android.
+4. The 18-24 age group has the most sessions (302). Aim new features and campaigns at them.
+5. Peak usage is around 21:00 and Sunday is the busiest day. Send notifications just before these times, and run re-engagement offers on Tuesday, the quietest day.
+(Only 34% of sessions are High engagement, so aim to lift this.)
